@@ -9,4 +9,4 @@
   }
 </style>
 
-<h1>Hello!</h1>
+<h1>Display will be placed here</h1>

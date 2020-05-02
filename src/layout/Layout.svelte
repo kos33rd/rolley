@@ -1,17 +1,10 @@
 <style>
   :global(body) {
-    background-color: gray;
-  }
-
-  main {
-    background-color: white;
-    border-radius: 40px;
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 24px;
+    background-color: #e5ba75;
+    background-image: url(../assets/wood.png);
   }
 </style>
 
 <main>
-  <slot/>
+  <slot />
 </main>

@@ -1,8 +1,8 @@
 <script>
   import Layout from './layout/Layout.svelte'
-  import MainPage from './pages/Main.svelte'
+  import Calculator from './app/Calculator.svelte'
 </script>
 
 <Layout>
-  <MainPage/>
+  <Calculator/>
 </Layout>
