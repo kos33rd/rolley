@@ -13,9 +13,29 @@
     max-width: 100%;
   }
 
+  .md-1 {
+    flex-basis: calc(1 / 12 * 100%);
+    max-width: calc(1 / 12 * 100%);
+  }
+
+  .md-2 {
+    flex-basis: calc(2 / 12 * 100%);
+    max-width: calc(2 / 12 * 100%);
+  }
+
+  .md-3 {
+    flex-basis: calc(3 / 12 * 100%);
+    max-width: calc(3 / 12 * 100%);
+  }
+
   .md-4 {
     flex-basis: calc(4 / 12 * 100%);
     max-width: calc(4 / 12 * 100%);
+  }
+
+  .md-6 {
+    flex-basis: calc(6 / 12 * 100%);
+    max-width: calc(6 / 12 * 100%);
   }
 
   .md-8 {
@@ -29,6 +49,6 @@
   }
 </style>
 
-<div class={`col md-${md}`}>
+<div class={`col md-${md} ${$$props.class || ''}`}>
   <slot />
 </div>

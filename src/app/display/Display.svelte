@@ -1,12 +1,34 @@
-
 <script>
-  console.log('KEK')
+  import Row from '../../components/grid/Row.svelte'
+  import Col from '../../components/grid/Col.svelte'
 </script>
 
 <style>
-  h1 {
-    color: red;
+  .display {
+    flex: 1;
+    height: 290px;
+    margin-bottom: 16px;
+    background: transparent url('../../assets/display.svg') no-repeat;
+  }
+
+  .model {
+    text-transform: uppercase;
+    font-family: 'Play', sans-serif;
+    margin: 0 0 32px 48px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #111;
   }
 </style>
 
-<h1>Display will be placed here</h1>
+<Row>
+  <Col md='12'>
+    <div class='display'>
+    </div>
+  </Col>
+</Row>
+<Row>
+  <Col md='12'>
+    <h2 class='model'>mv 1.0</h2>
+  </Col>
+</Row>

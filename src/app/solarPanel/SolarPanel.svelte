@@ -15,9 +15,9 @@
     align-self: center;
     text-transform: uppercase;
     font-family: 'Play', sans-serif;
+    margin: 0 0 0 48px;
     font-weight: 700;
     font-size: 48px;
-    margin: 0;
     color: #111;
   }
 </style>
