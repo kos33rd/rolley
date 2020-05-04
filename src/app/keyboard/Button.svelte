@@ -1,5 +1,7 @@
 <script>
   import Col from '../../components/grid/Col.svelte'
+
+  export let onClick = () => {}
 </script>
 
 <style>
@@ -25,6 +27,7 @@
 
     color: white;
     font-size: 40px;
+    font-family: 'Play', sans-serif;
   }
 
   .button:active {
@@ -62,7 +65,7 @@
 
 <Col md='3'>
   <div class='button-socket'>
-    <button class='button'>
+    <button class='button' on:click={onClick}>
       <slot />
     </button>
   </div>

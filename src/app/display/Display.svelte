@@ -1,6 +1,13 @@
 <script>
   import Row from '../../components/grid/Row.svelte'
   import Col from '../../components/grid/Col.svelte'
+  import { command } from '../../data/stores'
+
+  let currentCommand
+  const unsubscribe = command.subscribe(value => {
+    currentCommand = value;
+  });
+
 </script>
 
 <style>
@@ -19,11 +26,26 @@
     font-size: 24px;
     color: #111;
   }
+
+  .command {
+    margin: 32px;
+    text-transform: uppercase;
+    font-family: 'Play', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #111;
+  }
 </style>
 
 <Row>
   <Col md='12'>
     <div class='display'>
+      <div class='command'>
+        {currentCommand}
+      </div>
+      <div class='result'>
+
+      </div>
     </div>
   </Col>
 </Row>

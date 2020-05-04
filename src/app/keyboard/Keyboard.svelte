@@ -2,62 +2,72 @@
 <script>
   import Row from '../../components/grid/Row.svelte'
   import Button from './Button.svelte'
-</script>
+  import { BUTTONS } from '../../data/constants'
+  import { command } from '../../data/stores'
 
-<style>
-</style>
+
+  const handleButtonClick = (button) => () => {
+    if (button === BUTTONS.CLEAR) {
+      command.set(null)
+    } else {
+      command.update(() => button)
+    }
+  }
+
+
+</script>
 
 <section>
   <Row>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.X2)}>
       x2
     </Button>
-    <Button md='3'>
+    <Button onClick={handleButtonClick(BUTTONS.X3)}>
       x3
     </Button>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.X4)}>
       x4
     </Button>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.CLEAR)}>
       C
     </Button>
   </Row>
 
   <Row>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.D100)}>
       d100
     </Button>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.D12)}>
       d12
     </Button>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.D10)}>
       d10
     </Button>
   </Row>
 
   <Row>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.D8)}>
       d8
     </Button>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.D4)}>
       d4
     </Button>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.D3)}>
       d3
     </Button>
   </Row>
 
   <Row>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.D20)}>
       d20
     </Button>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.D6)}>
       d6
     </Button>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.D2)}>
       d2
     </Button>
-    <Button>
+    <Button onClick={handleButtonClick(BUTTONS.EQUALS)}>
       =
     </Button>
   </Row>
