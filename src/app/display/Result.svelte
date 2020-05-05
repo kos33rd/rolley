@@ -1,6 +1,4 @@
 <script>
-  import { padStart } from 'lodash'
-
   export let result = ''
 </script>
 
@@ -29,5 +27,5 @@
 </style>
 
 <div class='result'>
-  {padStart(result, 12, '_')}
+  {result.padStart(12, '_')}
 </div>
