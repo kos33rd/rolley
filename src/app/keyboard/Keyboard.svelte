@@ -8,7 +8,7 @@
 
   const handleButtonClick = (button) => () => {
     if (button === BUTTONS.CLEAR) {
-      command.set(null)
+      command.set('')
     } else {
       command.update(() => button)
     }

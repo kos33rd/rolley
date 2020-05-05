@@ -1,17 +1,27 @@
 <script>
   import Row from '../../components/grid/Row.svelte'
   import Col from '../../components/grid/Col.svelte'
-  import { command } from '../../data/stores'
+  import { command, result } from '../../data/stores'
+  import Command from './Command.svelte'
+  import Result from './Result.svelte'
 
   let currentCommand
+  let currentResult
+
   const unsubscribe = command.subscribe(value => {
-    currentCommand = value;
+    currentCommand = value
   });
+
+  result.subscribe((value) => {
+    currentResult = value
+  })
 
 </script>
 
 <style>
   .display {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     height: 290px;
     margin-bottom: 16px;
@@ -26,26 +36,13 @@
     font-size: 24px;
     color: #111;
   }
-
-  .command {
-    margin: 32px;
-    text-transform: uppercase;
-    font-family: 'Play', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    color: #111;
-  }
 </style>
 
 <Row>
   <Col md='12'>
     <div class='display'>
-      <div class='command'>
-        {currentCommand}
-      </div>
-      <div class='result'>
-
-      </div>
+      <Command command={currentCommand}/>
+      <Result result={currentResult}/>
     </div>
   </Col>
 </Row>
