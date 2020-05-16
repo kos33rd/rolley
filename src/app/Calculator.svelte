@@ -8,10 +8,9 @@
 
   div {
     max-width: 750px;
-    max-height: calc(100vh - 72px);
-    height: 1024px;
+    height: 100%;
     margin: 16px auto;
-    padding: 16px;
+    padding: 16px 16px 64px;
     border: 4px solid #232429;
     border-radius: 24px;
     box-shadow:

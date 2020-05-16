@@ -8,14 +8,12 @@
   @font-face {
     font-family: "dseg";
     src: url("assets/fonts/DSEG14ClassicMini-Italic.woff") format('woff');
-    font-style: italic;
   }
 
   @font-face {
     font-family: "dseg-bold";
     src: url("assets/fonts/DSEG14ClassicMini-BoldItalic.woff") format('woff');
     font-weight: bold;
-    font-style: italic;
   }
 
 </style>
