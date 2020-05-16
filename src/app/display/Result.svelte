@@ -24,6 +24,13 @@
     top: 0;
   }
 
+  @media screen and (max-width: 800px) {
+    .result {
+      font-size: 6vw;
+      margin: 0 8vw;
+    }
+  }
+
 </style>
 
 <div class='result'>

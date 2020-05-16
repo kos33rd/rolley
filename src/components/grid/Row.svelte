@@ -1,7 +1,8 @@
 <style>
 
   :root {
-    --fluid-margin: 30px;
+    --wide-margin: 30px;
+    --tight-margin: 10px;
   }
 
   div {
@@ -12,11 +13,19 @@
     -webkit-box-orient: horizontal;
     flex-direction: row;
     flex-wrap: wrap;
-    transition: margin-left, margin-right 0.1s linear 0s;
 
-    margin-left: var(--fluid-margin);
-    margin-right: var(--fluid-margin);
+    margin-left: var(--wide-margin);
+    margin-right: var(--wide-margin);
   }
+
+
+  @media screen and (max-width: 800px) {
+    div {
+      margin-left: var(--tight-margin);
+      margin-right: var(--tight-margin);
+    }
+  }
+
 </style>
 
 <div>

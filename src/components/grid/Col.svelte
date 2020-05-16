@@ -47,6 +47,12 @@
     flex-basis: calc(12 / 12 * 100%);
     max-width: calc(12 / 12 * 100%);
   }
+
+  @media screen and (max-width: 800px) {
+    .col {
+      padding: 0 5px;
+    }
+  }
 </style>
 
 <div class={`col md-${md} ${$$props.class || ''}`}>

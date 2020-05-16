@@ -22,6 +22,15 @@
     left: 0;
     top: 0;
   }
+
+  @media screen and (max-width: 800px) {
+    .command {
+      font-size: 4vw;
+      margin-top: 8vw;
+      margin-left: 8vw;
+      margin-bottom: 2vw;
+    }
+  }
 </style>
 
 <div class='command'>

@@ -61,6 +61,14 @@
     background-color: #4d4d4d;
   }
 
+  @media screen and (max-width: 800px) {
+    .button {
+      font-size: 6vw;
+    }
+    .button:focus:before {
+      background: none;
+    }
+  }
 </style>
 
 <Col md='3'>

@@ -8,6 +8,7 @@
 
   div {
     max-width: 750px;
+    max-height: calc(100vh - 72px);
     height: 1024px;
     margin: 16px auto;
     padding: 16px;

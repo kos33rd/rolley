@@ -15,10 +15,16 @@
     align-self: center;
     text-transform: uppercase;
     font-family: 'Play', sans-serif;
-    margin: 0 0 0 48px;
+    margin: 0 0 10px 48px;
     font-weight: 700;
     font-size: 48px;
     color: #111;
+  }
+
+  @media screen and (max-width: 800px) {
+    .solar-panel {
+      display: none;
+    }
   }
 </style>
 

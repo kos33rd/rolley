@@ -23,9 +23,18 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    height: 290px;
+    position: relative;
+    height: 0;
+    padding-top: 44%;
     margin-bottom: 16px;
     background: transparent url('../../assets/display.svg') no-repeat;
+  }
+  .display-bevel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .model {
@@ -36,13 +45,24 @@
     font-size: 24px;
     color: #111;
   }
+
+  @media screen and (max-width: 800px) {
+    .display {
+      /*height: 32vw;*/
+    }
+    .model {
+      margin-bottom: 8px;
+    }
+  }
 </style>
 
 <Row>
   <Col md='12'>
     <div class='display'>
-      <Command command={currentCommand}/>
-      <Result result={currentResult}/>
+      <div class='display-bevel'>
+        <Command command={currentCommand}/>
+        <Result result={currentResult}/>
+      </div>
     </div>
   </Col>
 </Row>
