@@ -25,7 +25,7 @@
 <Row>
   <Col md='8'>
     <h1 class='title'>
-      Rolly
+      Rolley
     </h1>
   </Col>
   <Col md='4'>
