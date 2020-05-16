@@ -1,10 +1,10 @@
 const crypto = self.crypto || self.msCrypto
 
-onmessage = ({ data: { dice, multiplier } }) => {
+onmessage = ({ data: { dice, multiplier, taskId } }) => {
   console.log('Worker received command', `Roll ${multiplier}d${dice}`)
 
   if (!dice) {
-    postMessage({ status: 'success', data: '' })
+    postMessage({ status: 'success', data: '', taskId })
     return
   }
 
@@ -20,12 +20,12 @@ onmessage = ({ data: { dice, multiplier } }) => {
 
     // To make more in-game suspense
     setTimeout(() =>
-      postMessage({ status: 'success', data: randomResult.toString() }),
+      postMessage({ status: 'success', data: randomResult.toString(), taskId }),
       2500
     )
 
   } catch (e) {
-    postMessage({ status: 'error', data: 'Calculation error' })
+    postMessage({ status: 'error', data: 'Calculation error', taskId })
 
   }
 }
