@@ -46,9 +46,9 @@
     position: absolute;
     top: 70%;
     left: 30%;
-    width: 350px;
-    height: 750px;
-    background: url(../../assets/finger.png);
+    width: 128px;
+    height: 128px;
+    background: url(../../assets/hand.png);
     background-size: 100%;
   }
 
