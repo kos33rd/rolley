@@ -17,7 +17,7 @@
   }
 
   .result:before {
-    content: "~~~~~~~~~~~~";
+    content: "~.~.~.~.~.~.~.~.~.~.~.~.";
     position: absolute;
     opacity: 0.05;
     left: 0;
@@ -27,5 +27,5 @@
 </style>
 
 <div class='result'>
-  {result.padStart(12, '_')}
+  {result.padStart(12, '!')}
 </div>

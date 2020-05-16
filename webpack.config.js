@@ -6,7 +6,8 @@ const production = mode === 'production'
 
 module.exports = {
   entry: {
-    bundle: ['./src/index.js']
+    bundle: ['./src/index.js'],
+    calculationWorker: ['./src/data/calculationWorker.js']
   },
   resolve: {
     alias: {

@@ -16,7 +16,7 @@
   }
 
   .command:before {
-    content: "~~~~~~~~~~~~";
+    content: "~.~.~.~.~.~.~.~.~.~.~.~.";
     position: absolute;
     opacity: 0.05;
     left: 0;

@@ -1,16 +1,11 @@
-import { writable } from 'svelte/store'
+import { writable, derived } from 'svelte/store'
 
-export const command = writable('')
+export const dice = writable('')
+export const multiplier = writable('')
 
-export const result = writable('To_be_done')
+export const command = derived(
+  [dice, multiplier],
+  ([dice, multiplier]) => `${multiplier || ''}${dice ? `d${dice}` : ''}`
+)
 
-// TODO: Rewrite/remove this stub
-const PROGRESS_SYMBOLS = [
-  '/', '-', '\\', '|'
-]
-let cnt = 0
-
-setInterval(() => {
-  cnt++
-  result.set(`To_be_done_${PROGRESS_SYMBOLS[cnt%PROGRESS_SYMBOLS.length]}`)
-}, 200)
+export const result = writable('')
