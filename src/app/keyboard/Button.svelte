@@ -45,11 +45,15 @@
     z-index: 2;
     position: absolute;
     top: 70%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    background: url(../../assets/hand.png);
+    left: 30%;
+    width: 350px;
+    height: 750px;
+    background: url(../../assets/finger.png);
     background-size: 100%;
+  }
+
+  .button:active:before {
+    margin-top: 3px;
   }
 
 
