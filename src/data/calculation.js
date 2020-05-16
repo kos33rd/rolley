@@ -1,7 +1,10 @@
-import { dice, multiplier, result } from './stores'
 import { derived } from 'svelte/store'
+import { dice, multiplier, result } from './stores'
 
-const diceAndMultiplier = derived([dice, multiplier], ([dice, multiplier]) => [dice, multiplier])
+const diceAndMultiplier = derived(
+  [dice, multiplier],
+  ([dice, multiplier]) => [dice, multiplier]
+)
 
 const PROGRESS_SYMBOLS = [
   '/', '-', '\\', '|'
@@ -20,14 +23,13 @@ const startLoading = () => {
 
 const stopLoading = () => clearInterval(loadingTimer)
 
-
 try {
   const calculationWorker = new Worker('./calculationWorker.js')
 
   diceAndMultiplier.subscribe(([dice, multiplier]) => {
-    if (dice) {
+    if (dice.value) {
       startLoading()
-      calculationWorker.postMessage({ dice, multiplier: multiplier || 1 })
+      calculationWorker.postMessage({ dice: dice.value, multiplier: multiplier.value || 1 })
     }
   })
 
@@ -41,5 +43,5 @@ try {
 
   }
 } catch {
-  result.set('Worker Error')
+  result.set('Worker!Error')
 }

@@ -12,8 +12,5 @@ export const BUTTONS = {
 
   X2: 2,
   X3: 3,
-  X4: 4,
-
-  EQUALS: 'equals',
-  CLEAR: 'clear'
+  X4: 4
 }

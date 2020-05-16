@@ -1,21 +1,25 @@
-
 <script>
   import Row from '../../components/grid/Row.svelte'
   import Button from './Button.svelte'
   import { BUTTONS } from '../../data/constants'
-  import { command, dice, multiplier } from '../../data/stores'
+  import { dice, multiplier, result } from '../../data/stores'
 
   const handleClearClick = () => {
-    dice.set('')
-    multiplier.set('')
+    dice.set({ value: '', timestamp: new Date })
+    multiplier.set({ value: '', timestamp: new Date })
+    result.set('')
   }
 
   const handleDiceClick = (button) => () => {
-    dice.update(() => button)
+    dice.set({ value: button, timestamp: new Date })
   }
 
   const handleMultiplierClick = (button) => () => {
-    multiplier.update(() => button)
+    multiplier.set({ value: button, timestamp: new Date })
+  }
+
+  const handleEqualsClick = () => {
+    dice.update((val) => ({ ...val, timestamp: new Date }))
   }
 
 </script>
@@ -70,7 +74,7 @@
     <Button onClick={handleDiceClick(BUTTONS.D2)}>
       d2
     </Button>
-    <Button onClick={handleDiceClick(BUTTONS.EQUALS)}>
+    <Button onClick={handleEqualsClick}>
       =
     </Button>
   </Row>
